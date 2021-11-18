@@ -30,10 +30,13 @@ function setup() {
   // Create the video
   var constraints = {
 	audio : false,
+	//video : {
+	//	facingMoed : {
+	//		exact: "environment"
+	//	}
+	//}
 	video : {
-		facingMoed : {
-			exact: "environment"
-		}
+		facingMoed : "user
 	}
   }
   video = createCapture(constraints);
