@@ -19,6 +19,7 @@ let video;
 let flippedVideo;
 // To store the classification
 let label = "";
+let label2 = "";
 
 // Load the model first
 function preload() {
@@ -56,6 +57,9 @@ function draw() {
   textSize(16);
   textAlign(CENTER);
   text(label, width / 2, height - 4);
+	
+fill(0);
+text("123", width / 2, height + 10);
 }
 
 // Get a prediction for the current video frame
@@ -74,6 +78,7 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]);
   label = results[0].label;
+  label2 = results[1].label;	
   // Classifiy again!
   classifyVideo();
 }
