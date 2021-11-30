@@ -20,8 +20,6 @@ let flippedVideo;
 // To store the classification
 let label = "";
 
-//<h2>22Weed Identification</h2>
-
 // Load the model first
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL + 'model.json');
@@ -55,7 +53,7 @@ function draw() {
 
   // Draw the label
   fill(255);
-  textSize(30);
+  textSize(16);
   textAlign(CENTER);
   text(label, width / 2, height - 4);
 }
