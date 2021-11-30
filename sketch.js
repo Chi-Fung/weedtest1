@@ -59,7 +59,7 @@ function draw() {
   text(label2, width / 2, height - 4);
 	
 fill(0, 102, 153);
-text('word', 10, 60);
+text('word', width / 2, height + 20);
 fill(0);
 text(label2, width / 2, height + 60);
 }
