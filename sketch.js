@@ -56,10 +56,10 @@ function draw() {
   fill(255);
   textSize(16);
   textAlign(CENTER);
-  text(label, width / 2, height - 4);
+  text(label2, width / 2, height - 4);
 	
-fill(0);
-text("123", width / 2, height + 20);
+fill(0, 102, 153);
+text('word', 10, 60);
 fill(0);
 text(label2, width / 2, height + 60);
 }
