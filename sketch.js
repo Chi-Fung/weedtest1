@@ -59,7 +59,9 @@ function draw() {
   text(label, width / 2, height - 4);
 	
 fill(0);
-text("123", width / 2, height + 10);
+text("123", width / 2, height + 20);
+fill(0);
+text(label2, width / 2, height + 60);
 }
 
 // Get a prediction for the current video frame
