@@ -20,7 +20,7 @@ let flippedVideo;
 // To store the classification
 let label = "";
 
-<h2>22Weed Identification</h2>
+//<h2>22Weed Identification</h2>
 
 // Load the model first
 function preload() {
