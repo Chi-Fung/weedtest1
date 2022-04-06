@@ -19,6 +19,7 @@ let video;
 let flippedVideo;
 // To store the classification
 let label = "";
+let confidence = "";
 
 // Load the model first
 function preload() {
@@ -35,7 +36,7 @@ function setup() {
 			exact: "environment"
 		}
 	}
-  };
+  }; 
   video = createCapture(constraints);
   video.size(320, 320);
   video.hide();
@@ -55,6 +56,7 @@ function draw() {
   textSize(16);
   textAlign(CENTER);
   text("label:" + label + "  confidence:" + confidence, width / 2, height-4);
+  
 }
 
 // Get a prediction for the current video frame
@@ -74,7 +76,7 @@ function gotResult(error, results) {
   // console.log(results[0]);
   label = results[0].label;
   confidence = nf(results[0].confidence, 0, 2);
-
-  // Classifiy again!
+  
+ 
   classifyVideo();
 }
