@@ -54,7 +54,7 @@ function draw() {
   fill(255);
   textSize(16);
   textAlign(CENTER);
-  text(label, width / 2, height - 4);
+  text("label:" + label + "  confidence:" + confidence, width / 2, height-4);
 }
 
 // Get a prediction for the current video frame
@@ -73,6 +73,7 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]);
   label = results[0].label;
+  confidence = nf(results[0].confidence, 0, 2);
 
   // Classifiy again!
   classifyVideo();
