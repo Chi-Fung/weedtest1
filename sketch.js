@@ -19,7 +19,6 @@ let video;
 let flippedVideo;
 // To store the classification
 let label = "";
-let label2 = "";
 
 // Load the model first
 function preload() {
@@ -27,7 +26,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(320, 260);
+  createCanvas(320, 320);
   // Create the video
   var constraints = {
 	audio : false,
@@ -37,9 +36,9 @@ function setup() {
 		}
 	}
 
-  }
+  };
   video = createCapture(constraints);
-  video.size(320, 240);
+  video.size(320, 320);
   video.hide();
 
   flippedVideo = ml5.flipImage(video)
@@ -57,11 +56,6 @@ function draw() {
   textSize(16);
   textAlign(CENTER);
   text(label, width / 2, height - 4);
-	
-fill(0, 102, 153);
-text('word', width / 2, height + 20);
-fill(0);
-text(label2, width / 2, height + 60);
 }
 
 // Get a prediction for the current video frame
@@ -80,7 +74,7 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]);
   label = results[0].label;
-  label2 = results[1].label;	
+
   // Classifiy again!
   classifyVideo();
 }
