@@ -20,6 +20,7 @@ let flippedVideo;
 // To store the classification
 let label = "";
 let confidence = "";
+let weed = "";
 
 // Load the model first
 function preload() {
