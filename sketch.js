@@ -31,11 +31,10 @@ function setup() {
   var constraints = {
 	audio : false,
 	video : {
-		facingMoed : {
+		facingMode : {
 			exact: "environment"
 		}
 	}
-
   };
   video = createCapture(constraints);
   video.size(320, 320);
