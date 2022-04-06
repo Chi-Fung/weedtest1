@@ -56,7 +56,7 @@ function draw() {
   fill(255);
   textSize(16);
   textAlign(CENTER);
-  text("label:" + label + "  confidence:" + confidence + "  " + weed,, width / 2, height-4);
+  text("label:" + label + "  confidence:" + confidence + "  " + weed, width / 2, height-4);
   
 }
 
