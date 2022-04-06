@@ -55,7 +55,7 @@ function draw() {
   fill(255);
   textSize(16);
   textAlign(CENTER);
-  text("label:" + label + "  confidence:" + confidence, width / 2, height-4);
+  text("label:" + label + "  confidence:" + confidence + "  " + weed,, width / 2, height-4);
   
 }
 
@@ -76,6 +76,12 @@ function gotResult(error, results) {
   // console.log(results[0]);
   label = results[0].label;
   confidence = nf(results[0].confidence, 0, 2);
+	
+  if(confidence>0.7){
+	weed = "雜草";	
+  }else{
+	weed = "  ";  
+  }
   
  
   classifyVideo();
