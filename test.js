@@ -17,7 +17,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(320, 500);
+  createCanvas(320, 320);
   // Create the video
 /*   var constraints = {
 	audio : false,
