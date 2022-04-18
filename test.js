@@ -3,7 +3,7 @@ let img;
 
 function preload() {
  
-  img = loadImage('kitten.jpg');
+  img = loadImage('IMG_0514.JPG');
 
 }
 
