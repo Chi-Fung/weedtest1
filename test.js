@@ -12,7 +12,7 @@ let weed = "";
 // Load the model first
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL + 'model.json');
-  img = loadImage('kitten.jpg');
+  img = loadImage('IMG_0514.JPG');
 
 }
 
