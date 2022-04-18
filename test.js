@@ -3,8 +3,6 @@ let classifier;
 // Model URL
 let imageModelURL = 'https://chi-fung.github.io/weedtest1/';
 
-// Video
-let video;
 let flippedVideo;
 // To store the classification
 let label = "";
@@ -54,7 +52,7 @@ function draw() {
 
 // Get a prediction for the current video frame
 function classifyVideo() {
-  flippedVideo = ml5.flipImage(video)
+  flippedVideo = ml5.flipImage(img)
   classifier.classify(flippedVideo, gotResult);
 }
 
