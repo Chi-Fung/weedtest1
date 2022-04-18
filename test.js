@@ -9,6 +9,7 @@ function preload() {
 
 function setup() {
   createCanvas(500, 500);
+  img.resize(300,400);
   image(img, 0, 0);
 
 }
